@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+
+    <title>Image Filters</title>
+  </head>
+
+  <body>
+    
+
+      <!---NAVBAR****-->
+      <div class="navbar">
+
+        <div class="myName">
+          <h3><span>m</span>.mubarak</h3>
+        </div>
+
+        <div class="moodColor">
+          <span id="checkMood"></span>
+        </div>
+
+      </div>
+        
+      <div class="container">
+
+        <!-- MAIN SHOW IMAGE**-->
+          <div class="main">
+
+            <!--SHOW IMAGE**-->
+            <div class="imageBox" id="imageBox">
+              <img id="imag" alt="image">
+              <canvas id="canvas"></canvas>
+            </div>
+
+            <!---DIV INPUT FILE**-->
+            <div class="btnUpload">
+              <label for="upload">upload</label>
+              <input type="file" name="upload" id="upload">
+            </div>
+
+          </div>
+
+        <!---RANGES FILTERS IMAGES****-->
+        <div class="ranges">
+
+          <!---RANGE-INPUTS**-->
+          <label for="saturate">saturate</label>
+          <input type="range" id="saturate" min="0" max="200" value="100">
+          
+          <label for="saturate">contrast</label>
+          <input type="range" name="contrast" id="contrast" min="0" max="200" value="100">
+          
+          <label for="saturate">brightness</label>
+          <input type="range" name="brightness" id="brightness" min="0" max="200" value="100">
+
+          <label for="saturate">sepia</label>
+          <input type="range" name="sepia" id="sepia" min="0" max="200" value="0">
+
+          <label for="saturate">grayscale</label>
+          <input type="range" name="grayscale" id="grayscale" min="0" max="1" step="0.1" value="0">
+
+          <label for="saturate">blur</label>
+          <input type="range" name="blur" id="blur" min="0" max="10" step="0.1" value="0" >
+
+          <label for="saturate">hue-rotate</label>
+          <input type="range" name="hue-rotate" id="hue-rotate" min="0" max="360" value="0">
+
+          <!---BUTTON DOWNLOAD AND RESET***-->
+          <div class="range-btnDownLoad-btnReset">
+
+            <a id="download" onclick="downloadImage()" download="image">download</a>
+            <button id="reset" onclick="resetValue()">reset</button>
+          
+          </div>
+
+        </div>
+
+      </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>

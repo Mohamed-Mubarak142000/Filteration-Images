@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+:root
+{
+    --bgColor : #444;
+    --bgBlock : #333;
+    --textColor : #fff;
+    --btnColor1 : orange;
+    --btnColor2 : green;
+    --btnhover2 : rgb(6, 150, 6);
+    --btnHover1 : rgb(223, 146, 3);
+}
+
+body
+{
+    background-color: var(--bgColor);
+}
+
+.navbar
+{
+    padding: 10px;
+    text-transform: uppercase;
+    background-color: var(--bgBlock);
+    box-shadow: 3px 3px 3px #555;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    color: var(--textColor);
+}
+
+.navbar .myName span
+{
+    color: var(--btnColor1);
+}
+
+.container
+{
+    position: relative;
+    background-color: var(--bgBlock);
+    width: 80%;
+    margin: auto;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 10px 0 ;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    gap: 70px;
+}
+
+.container::after
+{
+    content: " ";
+    width: 10px;
+    height: 100%;
+    background-color: var(--btnColor1);
+    top: 0;
+    left: 0;
+    border-radius: 5px 0 0px 5px;
+    position:absolute;
+}
+
+.container::before
+{
+    content: " ";
+    width: 10px;
+    height: 100%;
+    border-left: 3px dashed #444;
+    top: 0%;
+    left: 50% ;
+    position:absolute;
+}
+
+.main
+{
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+    padding: 20px 5px;
+}
+
+.main .imageBox
+{
+    width: 100%;
+    height: 350px;
+    border: 2px dashed #444;
+}
+
+.main .imageBox img,canvas
+{
+    width: 100%;
+    height: 100%;
+}
+
+.btnUpload input
+{
+    display: none;
+}
+
+.btnUpload label
+{
+    border: 3px dashed var(--bgColor);
+    font-size: 25px;
+    padding: 3px 5px;
+
+    text-transform: capitalize;
+    transition: all .5s;
+    color: var(--textColor);
+}
+
+.btnUpload label:hover
+{
+    background-color: var(--btnHover1);
+    cursor: pointer;
+}
+
+.ranges
+{ 
+    width:400px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 5px;
+    direction: rtl;
+    text-transform: capitalize;
+    color: var(--textColor);
+}
+
+.ranges input
+{
+    width: 75%;
+    outline: none;
+}
+
+.range-btnDownLoad-btnReset
+{
+    display: flex;
+    flex-direction: column;
+    padding: 10px 0;
+    gap: 20px;
+}
+
+.range-btnDownLoad-btnReset button ,
+.range-btnDownLoad-btnReset a
+{
+    font-size: 20px;
+    font-weight: bold;
+    outline: none;
+    width: 50%;
+    margin: auto;
+    color: black;
+    text-align: center;
+    border: 1px solid green;
+    padding: 5px 10px;
+    border-radius: 5px;
+    background-color: var(--btnColor2);
+    text-transform: uppercase;
+    transition: all .5s;
+}
+
+.range-btnDownLoad-btnReset a
+{
+    background-color: var(--btnColor1);
+    border: 1px solid orange;
+}
+
+.range-btnDownLoad-btnReset a:hover
+{
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: var(--btnHover1);   
+}
+
+.range-btnDownLoad-btnReset button:hover 
+{
+    cursor: pointer;
+    letter-spacing: 2px;
+    background-color: var(--btnhover2);
+}
